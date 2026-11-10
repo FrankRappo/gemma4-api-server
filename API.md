@@ -24,3 +24,8 @@ model, messages, max_tokens, temperature.
 Compatibility:
 
 POST /v1/responses is forwarded for Codex clients that use the Responses wire API.
+
+For context limits, inspect the model metadata returned by GET /v1/models.
+The current tested deployment reports meta.n_ctx=163840 and
+meta.n_ctx_train=262144. Codex must use a smaller working window so the system
+prompt, tool definitions, conversation history, and model output all fit.

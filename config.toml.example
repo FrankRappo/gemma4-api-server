@@ -1,6 +1,8 @@
 model = "gemma-4-31b-orba"
 model_provider = "gemma_local"
 model_context_window = 150000
+model_auto_compact_token_limit = 125000
+tool_output_token_limit = 64000
 
 [model_providers.gemma_local]
 name = "Local Gemma 4 via API"

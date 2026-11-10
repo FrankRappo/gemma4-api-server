@@ -32,6 +32,8 @@ The server also forwards POST /v1/responses as a compatibility route for Codex.
     model = "gemma-4-31b-orba"
     model_provider = "gemma_local"
     model_context_window = 150000
+    model_auto_compact_token_limit = 125000
+    tool_output_token_limit = 64000
 
     [model_providers.gemma_local]
     name = "Local Gemma 4 via API"
@@ -51,3 +53,5 @@ Keep the gateway bound to loopback.
 Never commit token files, SSH keys, passwords, or real infrastructure addresses.
 
 See API.md for the request contract.
+
+See LIMITS.md for Codex context limits and long conversations.
