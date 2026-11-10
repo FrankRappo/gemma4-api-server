@@ -1,0 +1,13 @@
+.env
+*.env
+.local-git-auth/
+github-token
+*token*
+*.key
+*.pem
+id_rsa*
+id_ed25519*
+known_hosts
+__pycache__/
+*.pyc
+*.log

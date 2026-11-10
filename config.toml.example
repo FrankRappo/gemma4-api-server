@@ -1,0 +1,9 @@
+model = "gemma-4-31b-orba"
+model_provider = "gemma_local"
+model_context_window = 150000
+
+[model_providers.gemma_local]
+name = "Local Gemma 4 via API"
+base_url = "http://127.0.0.1:18081/v1"
+wire_api = "responses"
+env_key = "GEMMA_API_KEY"

@@ -1,0 +1,19 @@
+[Unit]
+Description=Gemma 4 OpenAI-compatible API gateway
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=gemma-api
+Group=gemma-api
+WorkingDirectory=/opt/gemma4-api-server
+EnvironmentFile=/etc/gemma4-api-server.env
+ExecStart=/usr/bin/python3 /opt/gemma4-api-server/gemma_api.py
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
